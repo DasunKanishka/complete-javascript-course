@@ -1,20 +1,20 @@
-var johnTeamAvg, mikeTeamAvg, maryTeamAvg;
+/* var ashleyTeamAvg, nimTeamAvg, gimTeamAvg;
 
-johnTeamAvg = ( 89 + 120 + 103 ) / 3;
-mikeTeamAvg = ( 116 + 94 + 123 ) / 3;
-maryTeamAvg = ( 97 + 134 + 105 ) / 3;
+ashleyTeamAvg = ( 89 + 120 + 103 ) / 3;
+nimTeamAvg = ( 116 + 94 + 123 ) / 3;
+gimTeamAvg = ( 97 + 134 + 105 ) / 3;
 
-if ( johnTeamAvg > mikeTeamAvg && johnTeamAvg > maryTeamAvg ) {
-    console.log( 'Jhon\'s team has the highest average of ' + johnTeamAvg );
-} else if ( mikeTeamAvg > johnTeamAvg && mikeTeamAvg > maryTeamAvg ) {
-    console.log( 'Mike\'s team has the highest average of ' + mikeTeamAvg );
-} else if ( maryTeamAvg > johnTeamAvg && maryTeamAvg > mikeTeamAvg ) {
-    console.log( 'Mary\'s team has the highest average of ' + maryTeamAvg );
+if ( ashleyTeamAvg > nimTeamAvg && ashleyTeamAvg > gimTeamAvg ) {
+    console.log( 'Asjley\'s team has the highest average of ' + ashleyTeamAvg );
+} else if ( nimTeamAvg > ashleyTeamAvg && nimTeamAvg > gimTeamAvg ) {
+    console.log( 'Nim\'s team has the highest average of ' + nimTeamAvg );
+} else if ( gimTeamAvg > ashleyTeamAvg && gimTeamAvg > nimTeamAvg ) {
+    console.log( 'Gim\'s team has the highest average of ' + gimTeamAvg );
 } else {
-    console.log( 'All three teams have the same average of ' + johnTeamAvg );
-}
+    console.log( 'All three teams have the same average of ' + ashleyTeamAvg );
+} */
 
-var bills, tips, totalPaidAmounts, tipCalculator;
+/* var bills, tips, totalPaidAmounts, tipCalculator;
 
 bills = [124, 48, 268];
 tips = [];
@@ -39,9 +39,9 @@ bills.forEach(bill => {
     return tipCalculator ( bill );
 });
 
-console.log ( tips, totalPaidAmounts );
+console.log ( tips, totalPaidAmounts ); */
 
-var ashley = {
+/* var ashley = {
     name: 'Ashley',
     height: 1.53,
     mass: 58,
@@ -52,8 +52,8 @@ var ashley = {
     }
 }
 
-var nina = {
-    name: 'Nina',
+var nim = {
+    name: 'Nim',
     height: 1.49,
     mass: 40,
     calculateBMI: function () {
@@ -64,16 +64,16 @@ var nina = {
 }
 
 var compareBMIs = function () {
-    if ( ashley.calculateBMI() > nina.calculateBMI() ) {
-        return ashley.name + '\'s BMI is higher than ' + nina.name + '\'s.';
-    } else if ( nina.bmi > ashley.bmi ) {
-        return nina.name + '\'s BMI is higher than ' + ashley.name + '\'s.';
+    if ( ashley.calculateBMI() > nim.calculateBMI() ) {
+        return ashley.name + '\'s BMI is higher than ' + nim.name + '\'s.';
+    } else if ( nim.bmi > ashley.bmi ) {
+        return nim.name + '\'s BMI is higher than ' + ashley.name + '\'s.';
     } else {
-        return 'Both ' + ashley.name + '\'s and ' + nina.name + '\'s BMIs are equal.';
+        return 'Both ' + ashley.name + '\'s and ' + nim.name + '\'s BMIs are equal.';
     }
 }
 
-console.log( ashley, nina, compareBMIs() );
+console.log( ashley, nim, compareBMIs() ); */
 
 var tipCalculator, tip, ashleyBills, markBills, tipsAverage;
 
@@ -111,7 +111,7 @@ ashleyBills = {
     }
 };
 
-ninaBills = {
+nimBills = {
     bills: [77, 475, 110, 45],
     tipBreakPoints: [100, 300],
     tipPercentages: [20, 10, 25],
@@ -124,7 +124,7 @@ ninaBills = {
     }
 }
 
-ashleyBills.calculateTips(); ninaBills.calculateTips();
+ashleyBills.calculateTips(); nimBills.calculateTips();
 
 tipsAverage = function ( tips ) {
     var tipsAvg, totalTipsAmount;
@@ -138,8 +138,8 @@ tipsAverage = function ( tips ) {
     return tipsAvg = totalTipsAmount / tips.length;
 }
 
-if ( tipsAverage ( ashleyBills.tips ) > tipsAverage ( ninaBills.tips ) ) {
-    console.log ( 'Ashley\'s family has paid the higher tips on average than Nina\'s');
+if ( tipsAverage ( ashleyBills.tips ) > tipsAverage ( nimBills.tips ) ) {
+    console.log ( 'Ashley\'s family has paid the higher tips on average than Nim\'s');
 } else {
-    console.log ( 'Nina\'s family has paid the higher tips on average than Nina\'s');
+    console.log ( 'Nim\'s family has paid the higher tips on average than Ashley\'s');
 }
