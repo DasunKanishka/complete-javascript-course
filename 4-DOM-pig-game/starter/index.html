@@ -10,6 +10,14 @@
     </head>
 
     <body>
+        <form action="#">
+            <label for="winningScore">Winning Score</label>
+
+            <input type="number" name="winningScore" id="winningScore" autofocus />
+
+            <button class="btn-set">Set</button>
+        </form>
+
         <div class="wrapper clearfix">
             <div class="player-0-panel">
                 <div class="player-name" id="name-0">Player 1</div>
@@ -34,7 +42,8 @@
             <button class="btn-hold hidden"><i class="ion-ios-download-outline"></i>Hold</button>
             <button class="btn-reset hidden"><i class="ion-ios-refresh-outline"></i>Reset</button>
             
-            <img src="dice-1.png" alt="Dice" class="dice hidden">
+            <img src="dice-1.png" alt="Dice" class="dice dice-0 hidden">
+            <img src="dice-1.png" alt="Dice" class="dice dice-1 hidden">
         </div>
         
         <script src="app.js"></script>

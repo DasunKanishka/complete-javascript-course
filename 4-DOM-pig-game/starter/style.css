@@ -26,7 +26,7 @@ body {
     color: #555;
 }
 
-.wrapper {
+.wrapper, form {
     width: 1000px;
     position: absolute;
     top: 50%;
@@ -43,6 +43,55 @@ body {
     float: left;
     height: 600px;
     padding: 100px;
+}
+
+form {
+    display: flex;
+    padding: 20px 60px;
+    background: none;
+    box-shadow: none;
+    justify-content: space-between;
+    top: 90px;
+}
+
+form label {
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+form input {
+    height: 40px;
+    max-width: 300px;
+    padding: 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+form input, form input:focus {
+    outline: none;
+}
+
+form button {
+    height: 40px;
+    width: auto;
+    padding: 0 60px;
+    background: #EB4D4D;
+    position: static;
+    color: #ffffff;
+    transform: none;
 }
 
 
@@ -144,10 +193,17 @@ i {
 .dice {
     position: absolute;
     left: 50%;
-    top: 178px;
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.dice-0 {
+    top: 145px;
+}
+
+.dice-1 {
+    top: 260px;
 }
 
 .dice.hidden, button.hidden {
