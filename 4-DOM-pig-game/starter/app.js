@@ -85,6 +85,10 @@ function rollDices () {
 
             document.getElementById( 'score-' + players.activePlayerID ).textContent = 0;
 
+            document.getElementById( 'gameNotificationText' ).textContent = 'You got two 6s repeatedly! Player ' + (( players.activePlayerID === 0 ) ? 2 : 1) + '\'s turn';
+
+            displayGameNotifications();
+
             turnPlayer();
         } else if ( diceNumber !== 1 ) {
             dices.dicesValues[ diceIndex ] += diceNumber;
@@ -95,6 +99,10 @@ function rollDices () {
             
             dices.previousDicesValues[ diceIndex ] = diceNumber;
         } else {
+            document.getElementById( 'gameNotificationText' ).textContent = 'You got number 1. Player ' + (( players.activePlayerID === 0 ) ? 2 : 1) + '\'s turn';
+
+            displayGameNotifications();
+
             turnPlayer();
 
             break;
@@ -102,6 +110,14 @@ function rollDices () {
 
         document.querySelector( '.dice-' + diceIndex ).src = 'dice-' + diceNumber + '.png';
     };
+
+    function displayGameNotifications () {
+        var gameNotifications = document.getElementById( 'gameNotifications' );
+
+        gameNotifications.classList.remove( 'hidden' );
+
+        setTimeout (function () { gameNotifications.classList.add( 'hidden' ); }, 2500);
+    }
 }
 
 function holdScore () {
