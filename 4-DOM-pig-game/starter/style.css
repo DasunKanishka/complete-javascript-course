@@ -34,6 +34,9 @@ body {
     transform: translate(-50%, -50%);
     background-color: #fff;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
     overflow: hidden;
 }
 
@@ -50,7 +53,7 @@ form {
     padding: 20px 60px;
     background: none;
     box-shadow: none;
-    justify-content: space-between;
+    justify-content: space-evenly;
     top: 90px;
 }
 
@@ -62,9 +65,13 @@ form label {
     text-transform: uppercase;
 }
 
+form input, form input:focus {
+    outline: none;
+}
+
 form input {
     height: 40px;
-    max-width: 300px;
+    max-width: 100px;
     padding: 0;
     background: none;
     border: none;
@@ -80,8 +87,8 @@ form input {
     text-transform: uppercase;
 }
 
-form input, form input:focus {
-    outline: none;
+form input:disabled {
+    border-bottom: none;
 }
 
 form button {
@@ -92,6 +99,27 @@ form button {
     position: static;
     color: #ffffff;
     transform: none;
+}
+
+form button:disabled {
+    opacity: .5;
+}
+
+form .form-notifications {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hidden {
+    display: none !important;
 }
 
 
@@ -186,7 +214,7 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new, .btn-reset { top: 45px;}
+.btn-reset { top: 45px;}
 .btn-roll { top: 405px;}
 .btn-hold { top: 465px;}
 
@@ -204,10 +232,6 @@ i {
 
 .dice-1 {
     top: 260px;
-}
-
-.dice.hidden, button.hidden {
-    display: none;
 }
 
 .winner { background-color: #f7f7f7; }
