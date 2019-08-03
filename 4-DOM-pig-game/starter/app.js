@@ -14,7 +14,7 @@ GAME RULES:
 */
 
 
-var isGamePlaying, players, winningScore;
+var players, winningScore;
 
 players = {
     activePlayerID: 0,
@@ -139,8 +139,6 @@ function holdScore () {
         document.querySelectorAll( '.dice, .btn-roll, .btn-hold' ).forEach(( element ) => {
             element.classList.add( 'hidden' );
         });
-
-        isGamePlaying = false;
     } else {
         turnPlayer();
     }
